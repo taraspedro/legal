@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Admin set</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <section id="authorization">
+        <h4>Input authorization data</h4>
+        <form id="authorizationForm">
+          <div class="form-group">
+            <input type="text" class="form-control" name="login" placeholder="Input administrator login" />
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Input administrator password" />
+          </div>
+          <button class="btn btn-warning access">Submit</button>
+        </form>
+      </section>
+        <section id="content" class='hidden'>
+          <section>        
+            <h4>Введіть контактні дані фірми</h4>
+            <form id="contactsUk">
+              <div class="form-group">
+                <input type="text" class="form-control" name="nameUk" placeholder="Назва фірми" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="addressUk" placeholder="Адреса фірми" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="bankUk" placeholder="Банківські реквізити фірми" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="phoneUk" placeholder="Контактний телефон фірми" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="emailUk" placeholder="Електронна скринька фірми" />
+              </div>
+              <button class="btn btn-primary" data-type="load" id="contactsUkSubmit">Оновити дані</button>
+              </form> 
+        </section>        
+        <section>
+        <h4>Введіть опис послуг</h4>
+          <form id="servUk">
+            <div class="form-group">
+              <textarea class="form-control" name="soleUk" placeholder="Послуги ФОПам"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="regUk" placeholder="Послуги державної реєсрації"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="investUk" placeholder="Супровід іноземних інвестицій"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="rentUk" placeholder="Оренда юридичної адреси"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="exchangeUk" placeholder="Внесення змін до відомостей в ЄДР"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="infoUk" placeholder="Отримання відомостей з ЄДР"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="liquidUk" placeholder="Ліквідація підприємств"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="bankruptcyUk" placeholder="Послуги у справах про банкрутство"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="accountUk" placeholder="Абонентське обслуговування"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="trademarkUk" placeholder="Реєстрація інтелектуальної власності"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="stockUk" placeholder="Послуги для акціонерних товариств"></textarea>
+            </div>
+            <button class="btn btn-primary" data-type="load" id="servUkSubmit">Оновити дані</button>
+          </form>
+        </section>
+        <section>
+          <h4>Додайте нову статтю</h4>
+          <form id="newsUk">
+            <div class="form-group">
+              <input type="text" name="titleUk" class="form-control" placeholder="Назва статті" />
+            </div>
+            <div class="form-group">
+              <textarea name='textUk' class="form-control" placeholder="Текст статті тут"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" name="dateUk" placeholder="Дата написання статті" />
+            </div>
+            <button class="btn btn-primary" data-type="load" id="newsUkSubmit">Додати статтю</button>  
+          </form>
+        </section>
+        <section>
+          <h4>Вкажіть відомості про компанію</h4>
+          <form id="aboutUk">
+            <div class="form-group">
+              <textarea name="aboutUk" class="form-control" placeholder="Вкажіть відомості про компанію"></textarea>            
+            </div>
+            <button class="btn btn-primary" data-type="load" id="aboutUkSubmit">Оновити дані</button>
+          </form>
+        </section>
+        <section>
+          <h4>Input company contact data</h4>
+          <form id="contactsEng">
+              <div class="form-group">
+                <input type="text" class="form-control" name="nameEng" placeholder="Company name" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="addressEng" placeholder="Company address" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="bankEng" placeholder="Bank requisites" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="phoneEng" placeholder="Company phone number" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="emailEng" placeholder="Company email" />
+              </div>
+              <button class="btn btn-primary" data-type="load" id="contactsEngSubmit">Оновити дані</button>
+              </form>
+        </section>
+        <section>
+          <h4>Input services description</h4>
+        <section>
+          <form id="servEng">
+            <div class="form-group">
+              <textarea class="form-control" name="soleEng" placeholder="Services for sole traders"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="regEng" placeholder="Registration of companies"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="investEng" placeholder="Support of foreign investments"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="rentEng" placeholder="Rent of legal address"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="exchangeEng" placeholder="Updating data about companies"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="infoEng" placeholder="Retriving data about companies"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="liquidEng" placeholder="Companie liquidation"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="bankruptcyEng" placeholder="Support in bankruptcy cases"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="accountEng" placeholder="Prepaid legal and accouning support"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="trademarkEng" placeholder="Intelectual proprietorship"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="stockEng" placeholder="Services for corpotions"></textarea>
+            </div>
+            <button class="btn btn-primary" data-type="load" id="servEngSubmit">Update data</button>
+          </form>
+        </section>
+        <section>
+          <h4>Add new article</h4>
+          <form id="newsEng">
+            <div class="form-group">
+              <input type="text" name="titleEng" class="form-control" placeholder="Article name" />
+            </div>
+            <div class="form-group">
+              <textarea name='textEng' class="form-control" placeholder="Article text here"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" name="dateEng" placeholder="Article date" />
+            </div>
+            <button class="btn btn-primary" data-type="load" id="newsEngSubmit">Add article</button>  
+          </form>
+        </section>
+        <section>
+          <h4>Add information about company</h4>
+          <form id="aboutEng">
+            <div class="form-group">
+              <textarea name="aboutEng" class="form-control" placeholder="Add information about company"></textarea>            
+            </div>
+            <button class="btn btn-primary" data-type="load" id="aboutEngSubmit">Update data</button>
+          </form>
+        </section>
+        <section>
+          <h4>Podaj dane kontaktowe firmy</h4>
+            <form id="contactsPl">
+              <div class="form-group">
+                <input type="text" class="form-control" name="namePl" placeholder="Nazwa spółki" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="addressPl" placeholder="Adres spółki" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="bankPl" placeholder="Dane bankowe spółki" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="phonePl" placeholder="Telefon spółki" />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="emailPl" placeholder="Email spółki" />
+              </div>
+              <button class="btn btn-primary" data-type="load" id="contactsPlSubmit">Odśwież</button>
+              </form> 
+        </section>
+        <section>
+          <h4>Proszę napisać Usługi</h4>
+          <form id="servPl">
+            <div class="form-group">
+              <textarea class="form-control" name="solePl" placeholder="Usługi dla przedsiębiorców"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="regPl" placeholder="Państwowe rejestracji Usługi"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="investPl" placeholder="Wsparcie inwestycji zagranicznych"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="rentPl" placeholder="Dzierżawa adres prawnej"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="exchangePl" placeholder="Zmiany informacji zawartych w REGON"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="infoPl" placeholder="Informacje uzyskania z REGON"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="liquidPl" placeholder="Likwidacja spółki"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="bankruptcyPl" placeholder="Usługi w przypadkach upadłości"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="accountPl" placeholder="Obsługa klienta"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="trademarkPl" placeholder="Rejestrowanie własności intelektualnej"></textarea>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="stockPl" placeholder="Usługi dla Spółek Akcyjnych"></textarea>
+            </div>
+            <button class="btn btn-primary" data-type="load" id="servPlSubmit">Odśwież</button>
+          </form>
+        </section>
+        <section>
+          <h4>Dodaj artykuł</h4>
+          <form id="newsPl">
+            <div class="form-group">
+              <input type="text" name="titlePl" class="form-control" placeholder="Tytuł artykułu" />
+            </div>
+            <div class="form-group">
+              <textarea name='textPl' class="form-control" placeholder="Artykuł tutaj"></textarea>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control" name="datePl" placeholder="Data artykułu" />
+            </div>
+            <button class="btn btn-primary" data-type="load" id="newsPlSubmit">Dodaj artykuł</button>  
+          </form>
+        </section>
+        <section>
+          <h4>Wprowadź informacje o firmie</h4>
+          <form id="aboutPl">
+            <div class="form-group">
+              <textarea name="aboutPl" class="form-control" placeholder="Wprowadź informacje o firmie"></textarea>         
+            </div>
+            <button class="btn btn-primary" data-type="load" id="aboutPlSubmit">Odśwież</button>
+          </form>
+        </section>
+      </section>
+      
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/server.js"></script>
+  </body>
+</html>
