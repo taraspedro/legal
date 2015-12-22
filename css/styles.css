@@ -206,6 +206,14 @@ header {
     margin-right: 0.3em;
 }
 
+.tab-pane li{
+    border: 1px solid;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #333;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+}
+
 .description {
     display: none;
     margin: 10px 10px 10px -15px;
