@@ -66,7 +66,9 @@ $(function() {
             setTimeout(function(){
                 getHeight();
                 },1500);
-            $(window).resize(getHeight);
+            $(window).resize(setTimeout(function(){
+                getHeight();
+                },1500));
             $('.navbar-header button').click(function() {
                 setTimeout(function(){
                 getHeight();
